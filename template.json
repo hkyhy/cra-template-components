@@ -1,0 +1,63 @@
+{
+  "package": {
+    "description": "远程组件项目",
+    "scripts": {
+      "init": "npm i --legacy-peer-deps",
+      "create": "modules-dev-create",
+      "lint-staged": "lint-staged",
+      "start": "cross-env PORT=3001 MODULES_DEV_PUBLIC_URL=/ craco start",
+      "build": "cross-env COMPONENTS_NAME=components-name MODULES_DEV_PUBLIC_URL=/components-name  craco build",
+      "test": "craco test --coverage",
+      "prepare": "husky install"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+        "prettier --config .prettierrc --write",
+        "git add"
+      ]
+    },
+    "jest": {
+      "moduleNameMapper": {
+        "^@common/(.*)": "<rootDir>/src/common/$1",
+        "^@components/(.*)": "<rootDir>/src/components/$1",
+        "^@utils/(.*)": "<rootDir>/src/common/utils/$1"
+      }
+    },
+    "files": [
+      "build"
+    ],
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-scripts": "5.0.0"
+    },
+    "devDependencies": {
+      "@craco/craco": "^7.1.0",
+      "@kne/react-fetch": "^1.4.1",
+      "@kne/remote-loader": "^1.2.3",
+      "@kne/modules-dev": "^2.0.6",
+      "http-proxy-middleware": "^2.0.3",
+      "cross-env": "^7.0.3",
+      "husky": "^8.0.0",
+      "lint-staged": "^13.0.3",
+      "prettier": "^2.7.1",
+      "node-sass": "^9.0.0",
+      "react-router-dom": "^6.8.1",
+      "antd": "^5.13.3",
+      "axios": "^1.6.7",
+      "classnames": "^2.5.1",
+      "lodash": "^4.17.21"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    }
+  }
+}
