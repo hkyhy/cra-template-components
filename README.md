@@ -4,7 +4,7 @@
 ## 安装
 
 ```shell
-npx create-react-app project-name --template=@kne/cra-template-components
+npx create-react-app project-name --template=@hkyhy/cra-template-components
 ```
 
 ## 注意
@@ -24,7 +24,7 @@ npx create-react-app project-name --template=@kne/cra-template-components
     ```
     为
     ```json
-    {"name": "@kne/project-name"}
+    {"name": "@hkyhy/project-name"}
     ```
     
     将components-name替换为实际项目名

@@ -21,8 +21,8 @@ jobs:
 
       - name: Publish Npm
         env:
-          NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
+          NODE_AUTH_TOKEN: ${{secrets.HKYHY_PACKAGE_PUBLISH}}
         run: npm publish --access=public
 
       - name: Sync To Cnpm
-        run: npm i -g cnpm && cnpm sync @kne/cra-template-components
+        run: npm i -g cnpm && cnpm sync @hkyhy/cra-template-components

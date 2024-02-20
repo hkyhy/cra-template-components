@@ -1,5 +1,5 @@
 {
-  "name": "@kne/cra-template-components",
+  "name": "@hkyhy/cra-template-components",
   "version": "0.1.3",
   "keywords": [
     "react",
@@ -9,14 +9,14 @@
   "description": "初始化一个远程组件项目",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kne-union/cra-template-components.git"
+    "url": "https://github.com/hkyhy/cra-template-components.git"
   },
   "license": "MIT",
   "engines": {
     "node": ">=14"
   },
   "bugs": {
-    "url": "https://github.com/kne-union/cra-template-components/issues"
+    "url": "https://github.com/hkyhy/cra-template-components/issues"
   },
   "files": [
     "template",
